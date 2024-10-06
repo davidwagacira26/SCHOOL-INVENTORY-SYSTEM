@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-image: url(/images/image1.jpg);
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background: #ec0101;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 24px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff3333;
+}
+
+.btn-delete {
+    background-color: #ff6347; 
+    color: #ffffff; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ec0101;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 9999;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px;
+  }
+  
+  select {
+    width: 100%; 
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+  }
+  
+  
+  option[value=""] {
+    color: #999; 
+  }
+
+  footer {
+    background-color: orangered;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

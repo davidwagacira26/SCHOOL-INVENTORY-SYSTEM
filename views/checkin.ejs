@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check In</title>
+    <link rel="stylesheet" href="/stylesheets/checkin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h1>Check In Items</h1>
+    </header>
+    <main>
+        <form id="checkin-form" class="checkout-form">
+            <div class="form-group">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label for="item-id">Item ID:</label>
+                <input type="text" id="item-id" name="item_id" required>
+            </div>
+            <div class="form-group">
+                <label for="checkin-date">Check-in Date:</label>
+                <input type="date" id="checkin-date" name="checkinDate" required>
+            </div>
+            <button type="submit" onclick="checkInItem()">Check In</button>
+        </form>
+    </main>
+    <div id="messageContainer"></div>
+    <script src="/javascripts/checkinitem.js"></script>
+    <footer>
+        <p>&copy; 2024 School Inventory System</p>
+    </footer>
+</body>
+</html>

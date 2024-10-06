@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/admin/dashboard1.css">
+    <script src="/javascripts/autocomplete.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Home</title>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <i class='bx bxs-graduation' style="font-size:80px"></i>
+            <h4>School Inventory Management System</h4>
+        </div>
+        <ul>
+            <div class="top-content">
+            <a href="/dashboard1"><i class='bx bx-home icon'></i> <span>Home</span></a>
+            <a href="/checkedout"><i class='bx bx-barcode icon'></i> <span>Checkouts</span></a>
+            <a href="/barcodescan"><i class='bx bx-barcode icon'></i> <span>Barcode Scan</span></a>
+            <a href="/inventoryupdate"><i class='bx bx-help-circle icon'></i> Inventory Update</a>
+            <a href="/usermanagement"><i class='bx bxs-user-check icon'></i> <span>User Management</span></a>
+        </ul>
+        <div class="bottom-content">
+            <a href="/reports"><i class='bx bxs-report icon'></i> <span>Reports Check</span></a>
+            <a href="/logout"><i class='bx bx-log-out icon'></i> Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input id="searchInput" type="text" placeholder="Search anything" autocomplete="off">
+                </div>
+                <div class="result-box">
+                    <ul id="resultList"></ul>
+                </div>
+                <div class="user">
+                    <a href="/update" class="btn">Update</a>
+                    <div class="add-new-button">
+                        <a href="/profile"><img src="/images/profile.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <a href="/lowstocks" class="card">
+                    <div class="box">
+                        <h1>Low Stock Alert</h1>
+                        <h3>Items</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="/images/books1.png" alt="">
+                    </div>
+                </a>
+                <a href="/checkinreminders" class="card">
+                    <div class="box">
+                        <h1>Check-in Reminders</h1>
+                        <h3>Items</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="/images/books1.png" alt="">
+                    </div>
+                </a>
+                <a href="/checkedout" class="card">
+                    <div class="box">
+                        <h1>Checked Out</h1>
+                        <h3>Items</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="/images/books1.png" alt="">
+                    </div>
+                </a>
+                <a href="/overdue" class="card">
+                    <div class="box">
+                        <h1>Overdue Items</h1>
+                        <h3>Textbooks</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="/images/books1.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="content-2">
+                <div class="recent-activity">
+                    <div class="title">
+                        <h2>Inventory Status</h2>
+                        <a href="/inventorystatus" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Item ID</th>
+                            <th>Item Name</th>
+                            <th>Check Out Date</th>
+                            <th>Check In Date</th>
+                        </tr>
+                        <% inventorystatus.forEach(activity => { %>
+                            <tr>
+                                <td><%= activity.student_id %></td>
+                                <td><%= activity.student_name %></td>
+                                <td><%= activity.item_id %></td>
+                                <td><%= activity.item_name %></td>
+                                <td><%= activity.check_out_date %></td>
+                                <td><%= activity.check_in_date %></td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+                <div class="textbook-list">
+                    <div class="title">
+                        <h2>Textbooks List</h2>
+                        <a href="/textbooks" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Author</th>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/book1s.jpg" alt="Textbook 1" width="30" height="30"></td>
+                            <td>KCSE Made Familiar Mathematics</td>
+                            <td>Caroline N.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/book2s.jpg" alt=""></td>
+                            <td>KCSE Mirror Biology</td>
+                            <td>H.W. Mwangi</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/book3s.jpg" alt=""></td>
+                            <td>A+ Revision Computer Studies</td>
+                            <td>Okuna E.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/book4s.jpg" alt=""></td>
+                            <td>Spot on Grammar</td>
+                            <td>Angelina Kioko</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/book5s.jpg" alt=""></td>
+                            <td>The 'A' Finder CRE Revision Book</td>
+                            <td>Okuna E.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/search.js"></script>
+</body>
+</html>

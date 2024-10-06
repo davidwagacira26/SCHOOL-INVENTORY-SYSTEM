@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: url(/images/background.png);
+    background-size: cover;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.overdue-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.overdue-table th,
+.overdue-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.overdue-table th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Textbooks Overview</title>
+        <link rel="stylesheet" href="/stylesheets/checkout.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Check Out Textbooks</h1>
+            <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search textbooks...">
+            <button><i class='bx bxs-filter-alt'></i></button>
+            <button><i class='bx bx-search'></i></button>
+        </div>
+        </header>
+        <main>
+            <div class="textbook" id="textbook1">
+                <input type="checkbox" class="textbook-checkbox" value="857293">
+                <img src="/images/book1.jpg" alt="Textbook 1">
+                <div class="description">
+                    <h2>KCSE Made Familiar Mathematics</h2>
+                    <p>ID: 857293</p>
+                    <p>Author: Caroline Njenga</p>
+                    <br>
+                    <p>This textbook offers a thorough study of the mathematical ideas covered in the KCSE exam, assisting students in gaining a firm grasp of important subjects and honing their problem-solving techniques.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook2">
+                <input type="checkbox" class="textbook-checkbox" value="461508">
+                <img src="/images/book2.jpg" alt="Textbook 2"> 
+                <div class="description">
+                    <h2>KCSE Mirror Biology</h2>
+                    <p>ID: 461508</p>
+                    <p>Author: Angelina Kioko</p>
+                    <br>
+                    <p>This textbook offers in-depth coverage of biological principles, experiments, and practical skills required for exam achievement is provided by this textbook</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook3">
+                <input type="checkbox" class="textbook-checkbox" value="392047">
+                <img src="/images/book3.jpg" alt="Textbook 3">
+                <div class="description">
+                    <h2>A+ Revision KCSE Computer Studies</h2>
+                    <p>ID: 392047</p>
+                    <p>Author: H. Otiende</p>
+                    <br>
+                    <p>This textbook includes practical exercises, case studies, and exam-style questions to help students excel in the KCSE Computer Studies examination.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook4">
+                <input type="checkbox" class="textbook-checkbox" value="920163">
+                <img src="/images/book4.jpg" alt="Textbook 4">
+                <div class="description">
+                    <h2>Spot On Grammar</h2>
+                    <p>ID: 920163</p>
+                    <p>Author: Angelina Kioko</p>
+                    <br>
+                    <p>This textbook book offers students concise explanations along with practice problems to help them grasp grammar ideas and enhance their writing abilities.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook5">
+                <input type="checkbox" class="textbook-checkbox" value="674319">
+                <img src="/images/book5.jpg" alt="Textbook 5">
+                <div class="description">
+                    <h2>Top Mark Computer Studies</h2>
+                    <p>ID: 674319</p>
+                    <p>Author: Kenya Literature Bureau</p>
+                    <br>
+                    <p>This textbook covers the principles of computer studies, including hardware, software, programming, and applications which aids in preparing students for examinations.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook6">
+                <input type="checkbox" class="textbook-checkbox" value="185932">
+                <img src="/images/book6.jpg" alt="Textbook 6">
+                <div class="description">
+                    <h2>The 'A' Finder CRE Revision Book</h2>
+                    <p>ID: 185932</p>
+                    <p>Author: Okuna E.</p>
+                    <br>
+                    <p>This textbook helps students comprehend and remember important ideas by providing succinct summaries of religious texts, perceptive analysis, and practice questions.
+                    </p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook7">
+                <input type="checkbox" class="textbook-checkbox" value="503726">
+                <img src="/images/book7.jpg" alt="Textbook 7">
+                <div class="description">
+                    <h2>Test it & Fix it KCSE Physics</h2>
+                    <p>ID: 503726</p>
+                    <p>Author: Oxford</p>
+                    <br>
+                    <p>This textbook helps students develop a solid foundation in physics by emphasizing real-world experimentation, problem-solving techniques, and test preparation.
+                    </p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook8">
+                <input type="checkbox" class="textbook-checkbox" value="829471">
+                <img src="/images/book8.jpg" alt="Textbook 8">
+                <div class="description">
+                    <h2>Upeo wa Insha</h2>
+                    <p>ID: 829471</p>
+                    <p>Author: Simon Ngige</p>
+                    <br>
+                    <p>Mwongozo huu unawezesha wanafunzi kupata ujuzi na mbinu zinazohitajika kuandika insha zenye ufanisi kwa kutoa mifano, vidokezo, na mazoezi ya vitendo ili kuimarisha uwezo wao wa kuandika.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook9">
+                <input type="checkbox" class="textbook-checkbox" value="356801">
+                <img src="/images/book9.jpg" alt="Textbook 9">
+                <div class="description">
+                    <h2>Mastering Chemistry Practicals</h2>
+                    <p>ID: 356801</p>
+                    <p>Author: Daniel Njoroge</p>
+                    <br>
+                    <p>
+                    This textbook provides explanations of fundamental ideas, pointers for correct data collection and analysis, and step-by-step directions for conducting chemistry experiments.
+                    </p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook10">
+                <input type="checkbox" class="textbook-checkbox" value="712945">
+                <img src="/images/book10.jpg" alt="Textbook 10">
+                <div class="description">
+                    <h2>KCSE Mirror History and Government</h2>
+                    <p>ID: 712945</p>
+                    <p>Author: Julius Ndege</p>
+                    <br>
+                    <p>
+                    This textbook provides thorough preparation for the test by covering political systems, historical events, and government structures.
+                    </p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook11">
+                <input type="checkbox" class="textbook-checkbox" value="890461">
+                <img src="/images/book11.jpg" alt="Textbook 11">
+                <div class="description">
+                    <h2>Solving Problems Mathematics</h2>
+                    <p>ID: 890461</p>
+                    <p>Author: C. Muturi</p>
+                    <br>
+                    <p>This mathematics textbook presents difficult problems, methods for solving them, and practice problems to help students become proficient in mathematics and critical thinkers.</p>
+                </div>
+            </div>
+            <div class="textbook" id="textbook12">
+                <input type="checkbox" class="textbook-checkbox" value="680456">
+                <img src="/images/book12.jpg" alt="Textbook 12">
+                <div class="description">
+                    <h2>Premier Golden Tips Agriculture</h2>
+                    <p>ID: 680456</p>
+                    <p>Author: J. Migwi</p>
+                    <br>
+                    <p>
+                    This textbook supports student learning and exam preparation by covering agricultural ideas, practices, and technology and providing real-world advice, case studies, and exam-focused information.
+                    </p>
+                </div>
+            </div>
+        <div id="no-results-message" style="display: none;">No results found.</div>
+        
+            <div>
+                <button id="check-in-btn" disabled>Check Out Selected</button>
+            </div>
+            <div id="popup-container" class="popup-container">
+                <div class="popup-content">
+                    <span class="close-btn" id="close-popup">&times;</span>
+                    <h2>Selected Textbooks</h2>
+                    <div id="selected-books"></div>
+                    <br>
+                    <div class="date-input">
+                        <label class="bold-label" for="student-id">Student ID:</label>
+                        <input type="text" id="student-id" name="studentId" required>
+                    </div>
+                    <div class="date-input">
+                        <label class="bold-label" for="student-name">Student Name:</label>
+                        <input type="text" id="student-name" name="studentName" required>
+                    </div>
+                    <div class="date-input">
+                        <label class="bold-label" for="check-out-date">Check-Out Date:</label>
+                        <input type="date" id="check-out-date" name="checkOutDate" required>
+                    </div>
+                    <div class="date-input">
+                        <label class="bold-label" for="check-in-date">Check-In Date:</label>
+                        <input type="date" id="check-in-date" name="checkInDate" required>
+                    </div>
+                    
+                    <br>             
+                    <button id="confirm-check-in">Confirm Check Out</button>
+                </div>
+            </div>
+            
+        </main>
+        <script src="/javascripts/textbooks.js"></script>
+         <footer>
+            <p>&copy; 2024 School Inventory System</p>
+        </footer>
+    </body>
+    </html>
+    
+    

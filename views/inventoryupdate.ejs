@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="/stylesheets/inventoryupdate.css">
+</head>
+<body>
+  <h1>Inventory Management</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (inventoryItems && inventoryItems.length > 0) { %>
+        <% inventoryItems.forEach(item => { %>
+          <tr>
+            <td><%= item.item_id %></td>
+            <td><%= item.item_name %></td>
+            <td><%= item.item_category %></td>
+            <td>
+              <form action="/inventoryupdate/<%= item.item_id %>" method="POST">
+                <input type="text" name="item_name" value="<%= item.item_name %>">
+                <input type="text" name="item_category" value="<%= item.item_category %>">
+                <button type="submit">Update</button>
+              </form>
+              <form action="/inventoryupdate/<%= item.item_id %>/delete" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <tr>
+          <td colspan="4">No items found in inventory.</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

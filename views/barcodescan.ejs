@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+    <link rel="stylesheet" href="/stylesheets/barcodescan.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>Barcode Input</h1>
+    <p>Enter the barcode number manually to scan the item:</p>
+
+    <div id="barcodeScannerWrapper">
+        <input type="text" id="barcodeInput" placeholder="Enter barcode number">
+        <button class="btn" onclick="handleManualBarcodeInput()">
+            Scan
+        </button>
+</div>
+    <div id="error-message"></div>
+    <div id="scanned-textbook-info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+    <script src="/javascripts/barcode.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 School Inventory System</p>
+    </footer>
+</body>
+</html>

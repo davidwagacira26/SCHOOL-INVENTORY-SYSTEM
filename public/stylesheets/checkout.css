@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(/images/image1.jpg);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.textbook {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.textbook:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.textbook img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.description {
+    flex-grow: 1;
+}
+
+.description h2 {
+    margin-top: 0;
+}
+
+.description a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.description a:hover {
+    background-color: #555;
+}
+
+.textbook-checkbox {
+    transform: scale(1.5); 
+}
+
+#check-in-btn {
+    background-color: #ec0101;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#check-in-btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.search-bar {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #4c00ff;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.search-bar button {
+    background-color: #4c00ff;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 400px; 
+    height: 400px; 
+    overflow-y: auto; 
+}
+
+.popup-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ec0101;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 9999;
+}
+
+.bold-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date-inputs {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.date-input {
+    margin-left: 1px; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.selected-book img {
+    width: 100px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+}
+
+#close-popup:hover {
+    color: red; 
+}
+
+.checked-out {
+    opacity: 0.5; 
+    pointer-events: none; 
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tabs {
+    display: flex;
+}
+.tab {
+    margin-right: 20px;
+    padding: 10px 26px;
+    background-color: #f9fafb;
+    border: 2px solid #111827;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #111827;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.tab::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #111827;
+    border-radius: inherit;
+    transform: translate(6px, 6px);
+    transition: 0.25s;
+    z-index: -1;
+}
+.tab:hover::after {
+    transform: translate(0);
+}
+.tab:hover {
+    background-color: #111827;
+    color: #f9fafb;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reports.css">
+    <title>School Inventory System Reports</title>
+</head>
+<body>
+    <div class="container">
+        <h1>School Inventory System Reports</h1>
+        <div class="report">
+            <h2 class="report-title">Inventory Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% inventoryItems.forEach(item => { %>
+                        <tr>
+                            <td><%= item.item_name %></td>
+                            <td><%= item.item_category %></td>
+                            <td><%= item.item_quantity %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <div class="report">
+            <h2 class="report-title">Check-out History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Item Name</th>
+                        <th>Check-out Date</th>
+                        <th>Check-in Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% checkOutHistory.forEach(record => { %>
+                        <tr>
+                            <td><%= record.student_name %></td>
+                            <td><%= record.item_name %></td>
+                            <td><%= record.check_out_date %></td>
+                            <td><%= record.check_in_date %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

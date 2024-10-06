@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <script src="/javascripts/profile.js"></script>
+    <title>User Profile</title>
+</head>
+<body>
+    <header>
+        <h1>My Profile</h1>
+    </header>
+    
+    <h2>User Profile</h2>
+    <form id="profileForm" action="/updateProfile" method="POST">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" value="<%= user.firstname %>" required><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" value="<%= user.lastname %>" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" required readonly><br>
+        <input type="submit" value="Update">
+    </form>
+    <h2>Change Password</h2>
+    <form id="changePasswordForm" action="/profile/changePassword" method="POST">
+        <label for="currentPassword">Current Password:</label>
+        <input type="password" id="currentPassword" name="currentPassword" required><br>
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required><br>
+        <input type="submit" value="Change Password">
+    </form>
+    <footer>
+        <p>&copy; 2024 School Inventory System</p>
+    </foo
+</body>
+</html>

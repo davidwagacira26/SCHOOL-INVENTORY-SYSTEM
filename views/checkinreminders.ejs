@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in Reminders</title>
+    <link rel="stylesheet" href="/stylesheets/admin/checkinreminders.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check-in Reminders</h1>
+        
+        <div class="reminder-section">
+            <h2 class="reminder-title">Check-in Reminders</h2>
+            <ul class="reminder-list">
+                <% checkinReminders.forEach(function(reminder) { %>
+                    <li class="reminder-item">
+                        <span class="book-title">Item Title:</span> <%= reminder.InventoryItem.item_name %><br>
+                        <span class="borrower-name">Student Name:</span> <%= reminder.student_name %>
+                        <div class="reminder-action">
+                            <form action="/checkinreminders/checkin" method="post">
+                                <input type="hidden" name="checkout_id" value="<%= reminder.checkout_id %>">
+                                <input type="hidden" name="student_id" value="<%= reminder.student_id %>">
+                                <button type="submit">Check-in</button>
+                            </form>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

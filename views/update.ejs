@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="/stylesheets/admin/update.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Inventory Item</h1>
+        <form id="updateForm" action="/update" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="item_name" required>
+            </div>
+            <div class="form-group">
+                <label for="item_id">Item ID:</label>
+                <input type="text" id="item_id" name="item_id" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="item_category" required>
+                    <option value="">Select a category</option>
+                    <option value="Book">Book</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="barcode">Barcode:</label> 
+                <input type="text" id="barcode" name="item_barcode" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label> 
+                <input type="number" id="quantity" name="item_quantity" required>
+            </div>
+            <button type="submit" class="btn">Add Item</button>
+        </form> 
+    </div>
+    <div id="messageContainer"></div>
+    <footer>
+        <p>&copy; 2024 School Inventory System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Status</title>
+    <link rel="stylesheet" href="/stylesheets/inventorystatus.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Inventory Status</h1>
+        <table class="activity-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Check Out Date</th>
+                    <th>Check In Date</th>
+                </tr>
+            </thead>
+            <tbody id="activity-list">
+                <% inventorystatus.forEach(item => { %>
+                    <tr>
+                        <td><%= item.Student.student_id %></td>
+                        <td><%= item.Student.student_name %></td>
+                        <td><%= item.item_id %></td>
+                        <td><%= item.item_name %></td>
+                        <td><%= item.check_out_date %></td>
+                        <td><%= item.check_in_date || 'Not returned' %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <script src="/javascripts/socketio.js"></script>
+</body>
+</html>

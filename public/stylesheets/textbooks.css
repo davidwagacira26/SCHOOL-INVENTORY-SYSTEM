@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/image1.jpg);
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.textbook-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.textbook {
+    width: 30%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+
+.textbook:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+}
+
+.textbook img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.textbook h2 {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.textbook p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.textbook-link {
+    text-decoration: none; 
+}
+
+.textbook-link:hover {
+    text-decoration: none; 
+}
