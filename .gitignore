@@ -81,3 +81,8 @@ yarn.lock
 # Temporary files
 *.tmp
 *.temp
+
+# Ignore MySQL dump files
+dump.mysql
+*.sql
+*.sql.gz
